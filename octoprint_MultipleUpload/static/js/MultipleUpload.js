@@ -5,25 +5,20 @@
  * License: AGPLv3
  */
 $(function() {
-    function MultipleuploadViewModel(parameters) {
-        var self = this;
-
-        // assign the injected parameters, e.g.:
-        // self.loginStateViewModel = parameters[0];
-        // self.settingsViewModel = parameters[1];
-
-        // TODO: Implement your plugin's view model here.
+  function MultipleuploadViewModel(parameters) {
+    var self = this;
+    self.onBeforeBinding = function() {
+      for (let upload_button of document.getElementsByClassName("fileinput-button")) {
+        if (upload_button.tagName == "INPUT") {
+          upload_button.setAttribute("multiple", true);
+        }
+      }
     }
+  }
 
-    /* view model class, parameters for constructor, container to bind to
-     * Please see http://docs.octoprint.org/en/master/plugins/viewmodels.html#registering-custom-viewmodels for more details
-     * and a full list of the available options.
-     */
-    OCTOPRINT_VIEWMODELS.push({
-        construct: MultipleuploadViewModel,
-        // ViewModels your plugin depends on, e.g. loginStateViewModel, settingsViewModel, ...
-        dependencies: [ /* "loginStateViewModel", "settingsViewModel" */ ],
-        // Elements to bind to, e.g. #settings_plugin_MultipleUpload, #tab_plugin_MultipleUpload, ...
-        elements: [ /* ... */ ]
-    });
+  OCTOPRINT_VIEWMODELS.push({
+    construct: MultipleuploadViewModel,
+    dependencies: [],
+    elements: []
+  });
 });
