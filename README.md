@@ -1,6 +1,6 @@
 # OctoPrint-MultipleUpload
 
-**TODO:** Describe what your plugin does.
+Allows you to upload multiple files at once.
 
 ## Setup
 
@@ -9,9 +9,10 @@ or manually using this URL:
 
     https://github.com/eyal0/OctoPrint-MultipleUpload/archive/master.zip
 
-**TODO:** Describe how to install your plugin, if more needs to be done than just installing it via pip or through
-the plugin manager.
-
 ## Configuration
 
-**TODO:** Describe your plugin's configuration options (if any).
+There are no settings.  To stop using this, either disable or remove it.
+
+## How does it work?
+
+It just adds the "multiple" attribute to the upload buttons.
