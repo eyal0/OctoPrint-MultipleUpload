@@ -11,9 +11,7 @@ class MultipleuploadPlugin(octoprint.plugin.AssetPlugin):
     # Define your plugin's asset files to automatically include in the
     # core UI here.
     return dict(
-	js=["js/MultipleUpload.js"],
-	css=["css/MultipleUpload.css"],
-	less=["less/MultipleUpload.less"]
+	js=["js/MultipleUpload.js"]
     )
 
   ##~~ Softwareupdate hook
