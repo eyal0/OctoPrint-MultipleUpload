@@ -3,7 +3,7 @@ from __future__ import absolute_import
 
 import octoprint.plugin
 
-class MultipleuploadPlugin(octoprint.plugin.AssetPlugin):
+class MultipleUploadPlugin(octoprint.plugin.AssetPlugin):
 
   ##~~ AssetPlugin mixin
 
@@ -22,7 +22,7 @@ class MultipleuploadPlugin(octoprint.plugin.AssetPlugin):
     # for details.
     return dict(
 	MultipleUpload=dict(
-	    displayName="Multipleupload Plugin",
+	    displayName="MultipleUpload Plugin",
 	    displayVersion=self._plugin_version,
 
 	    # version check: github repository
@@ -40,11 +40,11 @@ class MultipleuploadPlugin(octoprint.plugin.AssetPlugin):
 # If you want your plugin to be registered within OctoPrint under a different name than what you defined in setup.py
 # ("OctoPrint-PluginSkeleton"), you may define that here. Same goes for the other metadata derived from setup.py that
 # can be overwritten via __plugin_xyz__ control properties. See the documentation for that.
-__plugin_name__ = "Multipleupload Plugin"
+__plugin_name__ = "MultipleUpload Plugin"
 
 def __plugin_load__():
   global __plugin_implementation__
-  __plugin_implementation__ = MultipleuploadPlugin()
+  __plugin_implementation__ = MultipleUploadPlugin()
 
   global __plugin_hooks__
   __plugin_hooks__ = {
