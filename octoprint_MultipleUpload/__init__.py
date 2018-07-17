@@ -3,8 +3,7 @@ from __future__ import absolute_import
 
 import octoprint.plugin
 
-class MultipleuploadPlugin(octoprint.plugin.AssetPlugin,
-                           octoprint.plugin.TemplatePlugin):
+class MultipleuploadPlugin(octoprint.plugin.AssetPlugin):
 
   ##~~ AssetPlugin mixin
 
